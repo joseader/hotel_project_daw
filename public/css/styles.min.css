@@ -36,6 +36,9 @@ img::-moz-selection{color:#fff;background:0 0}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{color:#125568}
 }
 header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 56px);background-image:url(../img/header.jpg);background-position:center center;background-size:cover}
+header.masthead .brand-color1{color:#d5a324}
+header.masthead .brand-color2{color:#125568}
+header.masthead img{max-width:200px}
 header.masthead hr{margin-top:30px;margin-bottom:30px}
 header.masthead h1{font-size:2rem}
 header.masthead p{font-weight:300}

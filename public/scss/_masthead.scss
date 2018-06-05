@@ -5,6 +5,15 @@ header.masthead {
   background-image: url('../img/header.jpg');
   background-position: center center;
   @include background-cover;
+  .brand-color1{
+    color: $secondary;
+  }
+  .brand-color2{
+    color: $primary;
+  }
+  img{
+    max-width: 200px;
+  }
   hr {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -19,6 +28,7 @@ header.masthead {
     p {
       font-size: 1.15rem;
     }
+    
   }
   @media (min-width: 992px) {
     height: 100vh;
