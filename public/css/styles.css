@@ -46,6 +46,8 @@ h6 {
 
 section {
   padding: 8rem 0; }
+  section#habitaciones {
+    padding: 5rem 0; }
 
 .section-heading {
   margin-top: 0; }
@@ -182,7 +184,7 @@ header.masthead {
     text-align: center;
     opacity: 0;
     color: #fff;
-    background: rgba(18, 85, 104, 0.9);
+    background: rgba(104, 80, 18, 0.9);
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
@@ -237,11 +239,11 @@ header.masthead {
             box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important; }
 
 .btn-secondary {
-  background-color: #125568;
-  border-color: #125568; }
+  background-color: #685012;
+  border-color: #685012; }
   .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
     color: #fff;
-    background-color: #0e4352 !important; }
+    background-color: #523f0e !important; }
   .btn-secondary:active, .btn-secondary:focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
             box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important; }

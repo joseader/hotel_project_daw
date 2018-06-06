@@ -32,13 +32,13 @@
 
 }
 .btn-secondary{
-  background-color: $primary;
-  border-color: $primary;
+  background-color: $tertiary;
+  border-color: $tertiary;
   &:hover,
   &:focus,
   &:active {
     color: $white;
-    background-color: darken($primary, 5%) !important;
+    background-color: darken($tertiary, 5%) !important;
   }
   &:active,
   &:focus {
