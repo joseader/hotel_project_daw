@@ -39,6 +39,12 @@ h6 {
 .bg-primary {
   background-color: $primary !important;
 }
+.bg-secondary{
+  background-color: $secondary !important;
+}
+.bg-tertiary{
+  background-color: $tertiary !important;
+}
 
 .bg-dark {
   background-color: $gray-900 !important;
@@ -76,4 +82,8 @@ img::selection {
 img::-moz-selection {
   color: $white;
   background: transparent;
+}
+
+.visually-hidden{
+  display: none;
 }

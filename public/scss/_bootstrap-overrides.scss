@@ -9,6 +9,7 @@
   border: none;
   border-radius: 300px;
   @include sans-serif-font;
+  margin: .5rem 0;
 }
 
 .btn-xl {
@@ -28,4 +29,19 @@
   &:focus {
     box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
   }
+
+}
+.btn-secondary{
+  background-color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: darken($primary, 5%) !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+  } 
 }

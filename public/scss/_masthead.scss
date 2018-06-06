@@ -5,12 +5,6 @@ header.masthead {
   background-image: url('../img/header.jpg');
   background-position: center center;
   @include background-cover;
-  .brand-color1{
-    color: $secondary;
-  }
-  .brand-color2{
-    color: $primary;
-  }
   img{
     max-width: 200px;
   }
