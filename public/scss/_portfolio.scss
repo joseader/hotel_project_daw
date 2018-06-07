@@ -4,6 +4,10 @@
   display: block;
   max-width: 650px;
   margin: 0 auto;
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   .portfolio-box-caption {
     position: absolute;
     bottom: 0;

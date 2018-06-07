@@ -17,11 +17,14 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/slick/css/slick-theme.css"/>
 
     <!-- Estilos CSS -->
     <link href="css/styles.min.css" rel="stylesheet">
+
+ 
 
   </head>
 
@@ -82,7 +85,7 @@
               <hr class="light my-4">
               <p class="text-faded mb-4">El Hotel Ciudad de Estepona (antiguo Caracas Estepona) está situado en el centro histórico, a 150 metros de la playa de Estepona. Ofrece conexión Wi-Fi en las zonas comunes y habitaciones con aire acondicionado, algunas de las cuales disponen de vistas al mar.</p>               
               <p class="text-faded mb-4">Nuestro establecimiento que está pensado para aquellos que buscan una acogedora habitación en la que pasar la estancia y disfrutar del trato cercano y personal. Nuestro Hotel está dirigido a los que buscan un buen hotel, aunque no sea el más lujoso.</p>
-              <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Reservar</a>
+              <a class="btn btn-light btn-xl js-scroll-trigger sr-button" href="#servicios">Conócenos!</a>
             </div>
           </div>
         </div>
@@ -149,10 +152,8 @@
                 <p class="card-text">Habitación para 1 persona en cama de 90 cm. Disponen de cuarto de baño, Wi-Fi, teléfono, aire acondicionado y receptor de Tv. Todas al exterior con ventana y/o balcón.</p>
                 
               </div>
-              <div class="card-footer">
-                <a class="btn btn-secondary btn-xl sr-button" href="#galeria">Ver Fotos</a>
-                <a class="btn btn-primary btn-xl sr-button" href="#reservas">Reservar</a>
-              </div>
+              <a class="btn btn-primary btn-xl btn-block card-footer" href="#reservas">Reservar</a>
+             
             </div>
             <div class="card m-3">
               <img class="card-img-top" src="img/galeria/fullsize/doble/1.jpg" alt="Card image cap">
@@ -160,126 +161,68 @@
                 <h5 class="card-title font-weight-bold">Habitación Doble</h5>
                 <p class="card-text">Habitación para 2 personas con 2 camas individuales (90 cm.) o cama de matrimonio (135-150 cm.). Disponen de cuarto de baño, Wi-Fi, teléfono, aire acondicionado y receptor de Tv. Todas al exterior con ventana y/o balcón.</p>
 
-              </div>
-              <div class="card-footer">
-                  <a class="btn btn-secondary btn-xl sr-button" href="#galeria">Ver Fotos</a>
-                  <a class="btn btn-primary btn-xl sr-button" href="#reservas">Reservar</a>
-                </div>
+              </div>             
+              <a class="btn btn-primary btn-xl btn-block card-footer" href="#reservas">Reservar</a>
+              
             </div>
           </div>
-          
+          <button type="button" class="btn btn-secondary btn-xl js-scroll-trigger sr-button" data-toggle="modal" data-target="#slider-hab">Ver Fotos</button>
+                     
         </div>
       </section>
 
       <section class="p-0" id="galeria">
         <div class="container-fluid p-0">
           <div class="row no-gutters">
-            <div class="col-lg-4 col-sm-6 popup-gallery">
-              <a class="portfolio-box" href="img/galeria/fullsize/doble/1.jpg">
-                <img class="img-fluid" src="img/galeria/thumbnails/1.jpg" alt="">
-                <div class="portfolio-box-caption">
-                  <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      Habitaciones
+
+              <div class="col-lg-4 col-sm-6">
+                  <button class="portfolio-box" data-toggle="modal" data-target="#slider-hotel">
+                    <img class="img-fluid" src="img/galeria/thumbnails/2.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                          Hotel
+                        </div>
+                        <div class="project-name">
+                          Instalaciones del Hotel
+                        </div>
+                      </div>
                     </div>
-                    <div class="project-name">
-                      Habitación doble
-                    </div>
-                  </div>
+                  </button>  
                 </div>
-              </a>
-              <a class="visually-hidden" href="img/galeria/fullsize/doble/2.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/doble/3.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/doble/4.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/doble/5.jpg"></a>
-            </div>
-            <div class="col-lg-4 col-sm-6 popup-gallery">
-              <a class="portfolio-box" href="img/galeria/fullsize/individual/1.jpg">
-                <img class="img-fluid" src="img/galeria/thumbnails/2.jpg" alt="">
-                <div class="portfolio-box-caption">
-                  <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      Habitaciones
-                    </div>
-                    <div class="project-name">
-                      Habitación individual
-                    </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <button class="portfolio-box" data-toggle="modal" data-target="#slider-servicios">
+                      <img class="img-fluid" src="img/galeria/thumbnails/4.jpg" alt="">
+                      <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                            Servicios
+                          </div>
+                          <div class="project-name">
+                            Desayunos y comidas
+                          </div>
+                        </div>
+                      </div>
+                    </button>  
                   </div>
-                </div>
-              </a>
-              <a class="visually-hidden" href="img/galeria/fullsize/individual/2.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/individual/3.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/individual/4.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/individual/5.jpg"></a>
-            </div>
-            <div class="col-lg-4 col-sm-6 popup-gallery">
-              <a class="portfolio-box" href="img/galeria/fullsize/estepona/1.jpg">
-                <img class="img-fluid" src="img/galeria/thumbnails/3.jpg" alt="">
-                <div class="portfolio-box-caption">
-                  <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      Estepona
+
+                  <div class="col-lg-4 col-sm-6">
+                      <button class="portfolio-box" data-toggle="modal" data-target="#slider-turismo">
+                        <img class="img-fluid" src="img/galeria/thumbnails/3.jpg" alt="">
+                        <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                              Turismo
+                            </div>
+                            <div class="project-name">
+                              Estepona y su cultura
+                            </div>
+                          </div>
+                        </div>
+                      </button>  
                     </div>
-                    <div class="project-name">
-                      Tradición y cultura
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a class="visually-hidden" href="img/galeria/fullsize/estepona/2.jpg"></a>
-            </div>
-            <div class="col-lg-4 col-sm-6 popup-gallery">
-              <a class="portfolio-box" href="img/galeria/fullsize/servicios/1.jpg">
-                <img class="img-fluid" src="img/galeria/thumbnails/4.jpg" alt="">
-                <div class="portfolio-box-caption">
-                  <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      Servicios
-                    </div>
-                    <div class="project-name">
-                      Desayunos y comidas
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a class="visually-hidden" href="img/galeria/fullsize/servicios/2.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/servicios/3.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/servicios/4.jpg"></a>
-            </div>
-            <div class="col-lg-4 col-sm-6 popup-gallery">
-              <a class="portfolio-box" href="img/galeria/fullsize/hotel/1.jpg">
-                <img class="img-fluid" src="img/galeria/thumbnails/5.jpg" alt="">
-                <div class="portfolio-box-caption">
-                  <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      Hotel
-                    </div>
-                    <div class="project-name">
-                      Zonas del Hotel
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a class="visually-hidden" href="img/galeria/fullsize/hotel/2.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/hotel/3.jpg"></a>
-              <a class="visually-hidden" href="img/galeria/fullsize/hotel/4.jpg"></a>  
-            </div>
-            <div class="col-lg-4 col-sm-6 popup-gallery">
-              <a class="portfolio-box" href="img/galeria/fullsize/turismo/1.jpg">
-                <img class="img-fluid" src="img/galeria/thumbnails/6.jpg" alt="">
-                <div class="portfolio-box-caption">
-                  <div class="portfolio-box-caption-content">
-                    <div class="project-category text-faded">
-                      Turismo
-                    </div>
-                    <div class="project-name">
-                      Lugares famosos
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a class="visually-hidden" href="img/galeria/fullsize/turismo/2.jpg"></a>
-            </div>
+
           </div>
         </div>
       </section>
@@ -296,21 +239,135 @@
           <div class="row">
             <div class="col-lg-4 ml-auto text-center">
               <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-              <p>+ 34 951776833</p>
+              <p><a href="tel:+34951776833">+ 34 951 776 833</a></p>
             </div>
             <div class="col-lg-4 mr-auto text-center">
               <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
               <p>
-                <a href="mailto:your-email@your-domain.com">info@hotelciudadestepona.com</a>
+                <a href="mailto:info@hotelciudadestepona.com">info@hotelciudadestepona.com</a>
               </p>
             </div>
-          </div>
+          </div> 
+          <div class="row map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.384508479841!2d-5.150488184645994!3d36.424084080027704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0cd6a60a260511%3A0xc3de9da42d0d9495!2sHotel+Ciudad+Estepona!5e0!3m2!1ses!2ses!4v1528365086631" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>         
         </div>
+        
+        
       </section>
     </main>
-    <footer>
+    <footer class="footer bg-tertiary text-center text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="mb-4">Localización</h4>
+            <address>
+              <strong>Hotel Ciudad de Estepona</strong><br>
+              Av. San Lorenzo, 32,<br>
+              29680 Estepona, Málaga<br>
+            </address>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="mb-4">Síguenos</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-youtube"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-flickr"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="mb-4">Sobre Nosotros</h4>
+            <ul class="about p-0 m-0">
+              <li><a href="#politica1">Política de cookies</a></li>
+              <li><a href="#aviso">Aviso Legal</a></li>
+              <li><a href="#politica2">Política de privacidad</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright py-4 text-center text-white bg-dark">
+        <div class="container">
+          <small>Copyright © Hotel Ciudad Estepona 2018</small>
+        </div>
+      </div>
+    </footer>            
     
-    </footer>
+    <!-- Modals -->
+
+    <div class="modal fade" id="slider-hab" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="container bg-transparent">
+                <div class="slider">
+                    <div style="background: url(img/galeria/fullsize/individual/1.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/2.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/3.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/4.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/5.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/1.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/2.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/3.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/4.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/5.jpg);"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="slider-hotel" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="slider">
+                    <div style="background: url(img/galeria/fullsize/hotel/1.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/2.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/3.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/4.jpg);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="slider-servicios" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="slider">
+                    <div style="background: url(img/galeria/fullsize/servicios/1.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/2.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/3.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/4.jpg);"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="slider-turismo" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="slider">
+                    <div style="background: url(img/galeria/fullsize/turismo/1.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/turismo/2.jpg);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -319,7 +376,7 @@
     <!-- Plugins JQuery -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/slick/js/slick.min.js"></script>
 
     <!-- Script para la aplicación -->
     <script src="js/application.js"></script>

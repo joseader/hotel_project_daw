@@ -57,8 +57,10 @@
   }, 300);
 
   // Magnific popup calls
+
+
   $('.popup-gallery').click(function(e){
-    e.preventDefault();
+    e.preventDefault();  
     $(this).magnificPopup({
       delegate: 'a',
       type: 'image',
@@ -73,6 +75,14 @@
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
       }
     });
+  });
+  
+  //Slick Slider
+
+  $('.slider').slick({
+    infinite: false,
+    mobileFirst:true
+
   });
 
 })(jQuery); // End of use strict

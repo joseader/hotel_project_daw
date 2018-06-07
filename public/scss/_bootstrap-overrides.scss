@@ -15,7 +15,9 @@
 .btn-xl {
   padding: 1rem 2rem;
 }
-
+.btn-block{
+  margin: 0;
+}
 .btn-primary {
   background-color: $secondary;
   border-color: $secondary;
@@ -27,7 +29,7 @@
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295) !important;
   }
 
 }
@@ -42,6 +44,29 @@
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295) !important;
   } 
+}
+.footer{
+  .row{
+    padding: 4rem 0;
+  }
+  .copyright{
+    background-color: darken($tertiary, 5%) !important;
+  }
+  .btn-social{
+    font-size: 2.5rem;
+  }
+}
+.card{
+  border: none;
+}
+.modal-lg{
+  max-width: 750px;
+}
+
+.modal-content{
+  background: transparent;
+  border: none;  
+  
 }
