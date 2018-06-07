@@ -9,7 +9,25 @@
     <meta name="author" content="Hotel Ciudad Estepona">
 
     <title>Hotel Ciudad Estepona</title>
-
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
     <!-- Bootstrap CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -55,7 +73,7 @@
               <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#reservas">Reservar</a>
+              <a class="nav-link js-scroll-trigger reservar" href="#reservas">Reservar</a>
             </li>
           </ul>
         </div>
@@ -166,7 +184,7 @@
               
             </div>
           </div>
-          <button type="button" class="btn btn-secondary btn-xl js-scroll-trigger sr-button" data-toggle="modal" data-target="#slider-hab">Ver Fotos</button>
+          <button type="button" class="btn btn-secondary btn-xl js-scroll-trigger sr-button" data-toggle="modal" data-target="#slider-hab">Ver Imágenes</button>
                      
         </div>
       </section>
@@ -175,7 +193,7 @@
         <div class="container-fluid p-0">
           <div class="row no-gutters">
 
-              <div class="col-lg-4 col-sm-6">
+              <div class="col-lg-6">
                   <button class="portfolio-box" data-toggle="modal" data-target="#slider-hotel">
                     <img class="img-fluid" src="img/galeria/thumbnails/2.jpg" alt="">
                     <div class="portfolio-box-caption">
@@ -191,7 +209,7 @@
                   </button>  
                 </div>
 
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-6">
                     <button class="portfolio-box" data-toggle="modal" data-target="#slider-servicios">
                       <img class="img-fluid" src="img/galeria/thumbnails/4.jpg" alt="">
                       <div class="portfolio-box-caption">
@@ -207,7 +225,7 @@
                     </button>  
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
+                  <div class="col-lg-6">
                       <button class="portfolio-box" data-toggle="modal" data-target="#slider-turismo">
                         <img class="img-fluid" src="img/galeria/thumbnails/3.jpg" alt="">
                         <div class="portfolio-box-caption">
@@ -217,6 +235,22 @@
                             </div>
                             <div class="project-name">
                               Estepona y su cultura
+                            </div>
+                          </div>
+                        </div>
+                      </button>  
+                    </div>
+
+                    <div class="col-lg-6">
+                      <button class="portfolio-box" data-toggle="modal" data-target="#slider-servicios">
+                        <img class="img-fluid" src="img/galeria/thumbnails/4.jpg" alt="">
+                        <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                              Servicios
+                            </div>
+                            <div class="project-name">
+                              Desayunos y comidas
                             </div>
                           </div>
                         </div>
@@ -256,11 +290,12 @@
         
       </section>
     </main>
-    <footer class="footer bg-tertiary text-center text-white">
+    <footer class="footer bg-primary text-center text-white">
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="mb-4">Localización</h4>
+            <hr class="light my-4">
             <address>
               <strong>Hotel Ciudad de Estepona</strong><br>
               Av. San Lorenzo, 32,<br>
@@ -269,6 +304,7 @@
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="mb-4">Síguenos</h4>
+            <hr class="light my-4">
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
@@ -294,6 +330,7 @@
           </div>
           <div class="col-md-4">
             <h4 class="mb-4">Sobre Nosotros</h4>
+            <hr class="light my-4">
             <ul class="about p-0 m-0">
               <li><a href="#politica1">Política de cookies</a></li>
               <li><a href="#aviso">Aviso Legal</a></li>
@@ -302,7 +339,7 @@
           </div>
         </div>
       </div>
-      <div class="copyright py-4 text-center text-white bg-dark">
+      <div class="copyright py-4 text-center text-white">
         <div class="container">
           <small>Copyright © Hotel Ciudad Estepona 2018</small>
         </div>
@@ -335,11 +372,13 @@
     <div class="modal fade" id="slider-hotel" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
+                <div class="container bg-transparent">
                 <div class="slider">
                     <div style="background: url(img/galeria/fullsize/hotel/1.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/hotel/2.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/hotel/3.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/hotel/4.jpg);"></div>
+                </div>
                 </div>
             </div>
         </div>
@@ -348,12 +387,14 @@
     <div class="modal fade" id="slider-servicios" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
+                <div class="container bg-transparent">
                 <div class="slider">
                     <div style="background: url(img/galeria/fullsize/servicios/1.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/servicios/2.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/servicios/3.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/servicios/4.jpg);"></div>
-            </div>
+                </div>
+                </div>
         </div>
     </div>
     </div>
@@ -361,9 +402,11 @@
     <div class="modal fade" id="slider-turismo" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
+                <div class="container bg-transparent">
                 <div class="slider">
                     <div style="background: url(img/galeria/fullsize/turismo/1.jpg);"></div>
                     <div style="background: url(img/galeria/fullsize/turismo/2.jpg);"></div>
+                </div>
                 </div>
             </div>
         </div>
