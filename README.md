@@ -1,27 +1,9 @@
-# Slim Framework 3 Skeleton Application
+#Proyecto de Fin de Grado - Hotel Ciudad Estepona
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+Aplicación Web creada por Jose Ángel Delgado para el Proyecto de Fin de Grado de Desarrollo de Aplicaciones Web del IES Mar de Alborán. El aplicativo consiste en una web informativa de un hotel generada con una sola vista guiada para la facilidad en la experiencia del usuario y la reducción de tiempos de carga. La página web está diseñada con Bootstrap 4, Sass, HTML5, CSS3 y JS.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+## ¿Quieres ver el diseño de la web?
 
-## Install the Application
+Podrás observar el desarrollo Front-End de la demo del aplicativo a través del siguiente link:
 
-Run this command from the directory in which you want to install your new Slim Framework application.
-
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
-
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
-
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
-
-To run the application in development, you can run these commands 
-
-	cd [my-app-name]
-	php composer.phar start
-
-Run this command in the application directory to run the test suite
-
-	php composer.phar test
-
-That's it! Now go build something cool.
+[Hotel Ciudad Estepona](https://joseader.github.io/hotel_project_daw/public)
