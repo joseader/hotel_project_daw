@@ -1,7 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing
+  // Desvanecer al hacer scrolling usando jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -15,18 +15,18 @@
     }
   });
 
-  // Closes responsive menu when a scroll trigger link is clicked
+  // Cerrar menú responsive cuando se hace click en alguno de sus links
   $('.js-scroll-trigger').click(function() {
     $('.navbar-collapse').collapse('hide');
   });
 
-  // Activate scrollspy to add active class to navbar items on scroll
+  // Activar ScrollSpy
   $('body').scrollspy({
     target: '#mainNav',
     offset: 57
   });
 
-  // Collapse Navbar
+  // Mostrar-Ocultar menú de navegación
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
@@ -34,12 +34,12 @@
       $("#mainNav").removeClass("navbar-shrink");
     }
   };
-  // Collapse now if page is not at top
+  // Ocultar si no está en el inicio
   navbarCollapse();
-  // Collapse the navbar when page is scrolled
+  // Mostrar al hacer scroll
   $(window).scroll(navbarCollapse);
 
-  // Scroll reveal calls
+  // Scroll Reveal plugin
   window.sr = ScrollReveal();
   sr.reveal('.sr-icons', {
     duration: 600,
@@ -56,7 +56,7 @@
     distance: '0px'
   }, 300);
   
-  //Slick Slider
+  //Slick Slider plugin
 
   $('.slider').slick({
     infinite: false,

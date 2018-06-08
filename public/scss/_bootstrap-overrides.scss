@@ -60,6 +60,11 @@
   .btn{
     padding: .5rem .7rem;
   }
+  .btn-outline-light{
+    &:hover{
+      color: $primary;
+    }
+  }
 }
 
 .card{

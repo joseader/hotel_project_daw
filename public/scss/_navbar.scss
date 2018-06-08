@@ -28,7 +28,7 @@
           color: $primary;
         }
         &.active {
-          color: $tertiary !important;
+          color: lighten($color: $primary, $amount: 10%) !important;
           background-color: transparent;
           &:hover {
             background-color: transparent;
@@ -57,11 +57,16 @@
         color: $white;
       }
     }
-    .navbar-nav > li.nav-item > a.reservar,
-    .navbar-nav > li.nav-item > a.reservar:focus {
+    .navbar-nav > li.nav-item > button.reservar,
+    .navbar-nav > li.nav-item > button.reservar:focus {
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
       color: fade-out($secondary, .3);
+      background: transparent;
       &:hover {
         background-color: $secondary;
+        color: $white;
         border-radius: 4px;
       }
     }
@@ -82,12 +87,12 @@
           color: $secondary;
         }
       }
-      .navbar-nav > li.nav-item > a.reservar,
-      .navbar-nav > li.nav-item > a.reservar:focus {
-        color: $primary;
+      .navbar-nav > li.nav-item > button.reservar,
+      .navbar-nav > li.nav-item > button.reservar:focus {
+        color: $white;
+        background-color: $primary;
         &:hover {
-          background-color: $primary;
-          border-radius: 4px;
+          background-color: lighten($primary, 10%);
           color: $white;
         }
       }

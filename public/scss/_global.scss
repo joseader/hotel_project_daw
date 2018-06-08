@@ -35,6 +35,13 @@ h5,
 h6 {
   @include sans-serif-font;
 }
+button{
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
 
 .bg-primary {
   background-color: $primary !important;
