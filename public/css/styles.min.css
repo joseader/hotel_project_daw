@@ -112,3 +112,4 @@ header.masthead h1{font-size:4rem}
 .modal-content{background:0 0;border:none}
 .navbar-light .navbar-toggler{font-size:1.5rem;border:none;border-radius:4px;background:#125568;color:#fff}
 .list-inline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.fixed-top{z-index:1000}
