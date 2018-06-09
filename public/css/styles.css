@@ -116,22 +116,38 @@ img::-moz-selection {
       color: #125568; }
     #mainNav .navbar-brand img {
       max-width: 200px; }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link,
-  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+  #mainNav .navbar-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #212529; }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+        color: #125568; }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+        color: #1a7993 !important;
+        background-color: transparent; }
+        #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+        #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+          background-color: transparent; }
+  #mainNav .navbar-nav > li.nav-item > button.reservar,
+  #mainNav .navbar-nav > li.nav-item > button.reservar:focus {
+    color: #fff;
+    background-color: #125568;
     font-size: .9rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #212529; }
-    #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
-    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-      color: #125568; }
-    #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
-    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-      color: #1a7993 !important;
-      background-color: transparent; }
-      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
-      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
-        background-color: transparent; }
+    padding: 0.5rem 1rem; }
+    #mainNav .navbar-nav > li.nav-item > button.reservar:hover,
+    #mainNav .navbar-nav > li.nav-item > button.reservar:focus:hover {
+      background-color: #1a7993;
+      color: #fff; }
   @media (min-width: 992px) {
     #mainNav {
       border-color: transparent;
@@ -140,7 +156,7 @@ img::-moz-selection {
         color: rgba(255, 255, 255, 0.7); }
         #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
           color: #fff; }
-      #mainNav .navbar-nav > li.nav-item > a.nav-link {
+      #mainNav .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > button.nav-link {
         padding: 0.5rem 1rem; }
       #mainNav .navbar-nav > li.nav-item > a.nav-link,
       #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -172,7 +188,7 @@ img::-moz-selection {
           color: #212529; }
           #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
           #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-            color: #d5a324; }
+            color: #1a7993; }
         #mainNav.navbar-shrink .navbar-nav > li.nav-item > button.reservar,
         #mainNav.navbar-shrink .navbar-nav > li.nav-item > button.reservar:focus {
           color: #fff;
@@ -307,7 +323,17 @@ header.masthead {
 .footer .btn-social {
   font-size: 1.5rem; }
 .footer .btn {
-  padding: .5rem .7rem; }
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 .footer .btn-outline-light:hover {
   color: #125568; }
 
@@ -329,3 +355,10 @@ header.masthead {
 .modal-content {
   background: transparent;
   border: none; }
+
+.navbar-light .navbar-toggler {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #125568;
+  color: #fff; }

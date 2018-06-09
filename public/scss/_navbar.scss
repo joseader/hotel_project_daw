@@ -17,6 +17,7 @@
     }
   }
   .navbar-nav {
+    align-items: center;
     > li.nav-item {
        > a.nav-link,
       > a.nav-link:focus {
@@ -37,6 +38,21 @@
       }
     }
   }
+
+    .navbar-nav > li.nav-item > button.reservar,
+      .navbar-nav > li.nav-item > button.reservar:focus {
+        color: $white;
+        background-color: $primary;
+        font-size: .9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;        
+        &:hover {
+          background-color: lighten($primary, 10%);
+          color: $white;
+        }
+      }
+  
   @media (min-width: 992px) {
     border-color: transparent;
     background-color: transparent;
@@ -47,7 +63,7 @@
         color: $white;
       }
     }
-    .navbar-nav > li.nav-item > a.nav-link {
+    .navbar-nav > li.nav-item > a.nav-link, .navbar-nav > li.nav-item > button.nav-link {
       padding: 0.5rem 1rem;
     }
     .navbar-nav > li.nav-item > a.nav-link,
@@ -84,7 +100,7 @@
       .navbar-nav > li.nav-item > a.nav-link:focus {
         color: $gray-900;
         &:hover {
-          color: $secondary;
+          color: lighten($primary, 10%);
         }
       }
       .navbar-nav > li.nav-item > button.reservar,

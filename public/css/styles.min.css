@@ -29,15 +29,18 @@ img::-moz-selection{color:#fff;background:0 0}
 #mainNav .navbar-brand{font-weight:700;color:#125568;font-family:Raleway,'Helvetica Neue',Arial,sans-serif}
 #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:#125568}
 #mainNav .navbar-brand img{max-width:200px}
+#mainNav .navbar-nav{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 #mainNav .navbar-nav>li.nav-item>a.nav-link,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus{font-size:.9rem;font-weight:700;text-transform:uppercase;color:#212529}
 #mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav .navbar-nav>li.nav-item>a.nav-link:hover{color:#125568}
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active{color:#1a7993!important;background-color:transparent}
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active:hover{background-color:transparent}
+#mainNav .navbar-nav>li.nav-item>button.reservar,#mainNav .navbar-nav>li.nav-item>button.reservar:focus{color:#fff;background-color:#125568;font-size:.9rem;font-weight:700;text-transform:uppercase;padding:.5rem 1rem}
+#mainNav .navbar-nav>li.nav-item>button.reservar:focus:hover,#mainNav .navbar-nav>li.nav-item>button.reservar:hover{background-color:#1a7993;color:#fff}
 @media (min-width:992px){
 #mainNav{border-color:transparent;background-color:transparent}
 #mainNav .navbar-brand{color:rgba(255,255,255,.7)}
 #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:#fff}
-#mainNav .navbar-nav>li.nav-item>a.nav-link{padding:.5rem 1rem}
+#mainNav .navbar-nav>li.nav-item>a.nav-link,#mainNav .navbar-nav>li.nav-item>button.nav-link{padding:.5rem 1rem}
 #mainNav .navbar-nav>li.nav-item>a.nav-link,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus{color:rgba(255,255,255,.7)}
 #mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav .navbar-nav>li.nav-item>a.nav-link:hover{color:#fff}
 #mainNav .navbar-nav>li.nav-item>button.reservar,#mainNav .navbar-nav>li.nav-item>button.reservar:focus{font-size:.9rem;font-weight:700;text-transform:uppercase;color:rgba(213,163,36,.7);background:0 0}
@@ -46,7 +49,7 @@ img::-moz-selection{color:#fff;background:0 0}
 #mainNav.navbar-shrink .navbar-brand{color:#125568}
 #mainNav.navbar-shrink .navbar-brand:focus,#mainNav.navbar-shrink .navbar-brand:hover{color:#125568}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{color:#212529}
-#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{color:#d5a324}
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{color:#1a7993}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar,#mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:focus{color:#fff;background-color:#125568}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:hover{background-color:#1a7993;color:#fff}
 }
@@ -91,10 +94,11 @@ header.masthead h1{font-size:4rem}
 .footer .row{padding:4rem 0}
 .footer .copyright{background-color:#0e4352!important}
 .footer .btn-social{font-size:1.5rem}
-.footer .btn{padding:.5rem .7rem}
+.footer .btn{width:50px;height:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .footer .btn-outline-light:hover{color:#125568}
 .card{border:none;border-radius:4px}
 .modal{display:block;height:0}
 .modal-open .modal{display:none;height:auto}
 .modal-lg{max-width:750px}
 .modal-content{background:0 0;border:none}
+.navbar-light .navbar-toggler{font-size:1.5rem;border:none;border-radius:4px;background:#125568;color:#fff}
