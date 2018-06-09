@@ -212,7 +212,6 @@ header.masthead {
   padding-bottom: calc(10rem - 56px);
   background-image: url("../img/header.jpg");
   background-position: left;
-  height: 100vh;
   background-size: cover; }
   header.masthead img {
     max-width: 200px; }

@@ -60,7 +60,7 @@ img::-moz-selection{color:#fff;background:0 0}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar,#mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:focus{color:#fff;background-color:#125568}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:hover{background-color:#1a7993;color:#fff}
 }
-header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 56px);background-image:url(../img/header.jpg);background-position:left;height:100vh;background-size:cover}
+header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 56px);background-image:url(../img/header.jpg);background-position:left;background-size:cover}
 header.masthead img{max-width:200px}
 header.masthead hr{margin-top:30px;margin-bottom:30px}
 header.masthead h1{font-size:2rem}
