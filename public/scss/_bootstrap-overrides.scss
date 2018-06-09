@@ -3,6 +3,10 @@
   color: $primary !important;
 }
 
+.text-tertiary{
+  color: $tertiary !important;
+}
+
 .btn {
   font-weight: 700;
   text-transform: uppercase;
@@ -99,4 +103,9 @@
   border-radius: 4px;
   background: $primary;
   color: $white;
+}
+
+.list-inline{
+  display: flex;
+  justify-content: center;
 }

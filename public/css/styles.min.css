@@ -24,7 +24,14 @@ img::-moz-selection{color:#fff;background:0 0}
 .about li a{text-decoration:none;color:#fff}
 .about li a:hover{text-decoration:underline}
 .map{border:3px solid #125568;margin:3rem 0}
-.slider div{width:100%;height:475px}
+.slider div{width:100%;height:200px}
+@media (min-width:768px){
+.slider div{height:475px}
+}
+@media (min-width:1024px){
+.slider div{height:500px}
+}
+.addroom{cursor:pointer}
 #mainNav{border-bottom:1px solid rgba(33,37,41,.1);background-color:#fff;font-family:Raleway,'Helvetica Neue',Arial,sans-serif;-webkit-transition:all .2s;transition:all .2s}
 #mainNav .navbar-brand{font-weight:700;color:#125568;font-family:Raleway,'Helvetica Neue',Arial,sans-serif}
 #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:#125568}
@@ -53,12 +60,13 @@ img::-moz-selection{color:#fff;background:0 0}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar,#mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:focus{color:#fff;background-color:#125568}
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>button.reservar:hover{background-color:#1a7993;color:#fff}
 }
-header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 56px);background-image:url(../img/header.jpg);background-position:center center;background-size:cover}
+header.masthead{padding-top:10rem;padding-bottom:calc(10rem - 56px);background-image:url(../img/header.jpg);background-position:left;height:100vh;background-size:cover}
 header.masthead img{max-width:200px}
 header.masthead hr{margin-top:30px;margin-bottom:30px}
 header.masthead h1{font-size:2rem}
 header.masthead p{font-weight:300}
 @media (min-width:768px){
+header.masthead{background-position:center center}
 header.masthead p{font-size:1.15rem}
 }
 @media (min-width:992px){
@@ -82,6 +90,7 @@ header.masthead h1{font-size:4rem}
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name{font-size:22px}
 }
 .text-primary{color:#125568!important}
+.text-tertiary{color:#685012!important}
 .btn{font-weight:700;text-transform:uppercase;border:none;border-radius:4px;font-family:Raleway,'Helvetica Neue',Arial,sans-serif;margin:.5rem 0}
 .btn-xl{padding:1rem 2rem}
 .btn-block{margin:0}
@@ -102,3 +111,4 @@ header.masthead h1{font-size:4rem}
 .modal-lg{max-width:750px}
 .modal-content{background:0 0;border:none}
 .navbar-light .navbar-toggler{font-size:1.5rem;border:none;border-radius:4px;background:#125568;color:#fff}
+.list-inline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}

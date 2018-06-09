@@ -43,12 +43,33 @@
 
     <!-- Estilos CSS -->
     <link href="css/styles.min.css" rel="stylesheet">
-
+    <style>
+      #loader-wrapper {
+      position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+      }
+      
+    </style>
  
 
   </head>
 
   <body id="page-top">
+
+    <!-- Carga de la página -->
+
+    <div id="loader-wrapper">
+      <i class="fas fa-spinner fa-pulse text-primary"></i>
+    </div>
 
     <!-- Menu -->
 
@@ -197,7 +218,6 @@
                      
         </div>
       </section>
-
       <section class="p-0" id="galeria">
         <div class="container-fluid p-0">
           <div class="row no-gutters">
@@ -269,7 +289,6 @@
           </div>
         </div>
       </section>
-
       <section id="contacto">
         <div class="container">
           <div class="row">
@@ -365,16 +384,16 @@
             <div class="modal-content">
               <div class="container bg-transparent">
                 <div class="slider">
-                    <div style="background: url(img/galeria/fullsize/individual/1.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/individual/2.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/individual/3.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/individual/4.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/individual/5.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/doble/1.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/doble/2.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/doble/3.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/doble/4.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/doble/5.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/1.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/2.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/3.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/4.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/individual/5.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/1.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/2.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/3.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/4.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/doble/5.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
                 </div>
               </div>
             </div>
@@ -386,10 +405,10 @@
             <div class="modal-content">
                 <div class="container bg-transparent">
                 <div class="slider">
-                    <div style="background: url(img/galeria/fullsize/hotel/1.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/hotel/2.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/hotel/3.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/hotel/4.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/1.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/2.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/3.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/hotel/4.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
                 </div>
                 </div>
             </div>
@@ -401,10 +420,10 @@
             <div class="modal-content">
                 <div class="container bg-transparent">
                 <div class="slider">
-                    <div style="background: url(img/galeria/fullsize/servicios/1.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/servicios/2.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/servicios/3.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/servicios/4.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/1.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/2.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/3.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/servicios/4.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
                 </div>
                 </div>
         </div>
@@ -416,8 +435,8 @@
             <div class="modal-content">
                 <div class="container bg-transparent">
                 <div class="slider">
-                    <div style="background: url(img/galeria/fullsize/turismo/1.jpg);"></div>
-                    <div style="background: url(img/galeria/fullsize/turismo/2.jpg);"></div>
+                    <div style="background: url(img/galeria/fullsize/turismo/1.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
+                    <div style="background: url(img/galeria/fullsize/turismo/2.jpg); background-size: cover; background-position: center;background-repeat: no-repeat;"></div>
                 </div>
                 </div>
             </div>
@@ -425,7 +444,7 @@
     </div>
 
     <div class="modal fade" id="reservas" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog">
           <div class="modal-content bg-light">
               <div class="modal-header">
 
@@ -439,37 +458,33 @@
 
                   <form id="BookingForm" data-toggle="validator" novalidate="true" class="d-flex flex-wrap justify-content-between">
             
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="text" class="form-control" id="byourname" placeholder="Nombre completo" required="">
+                  <div class="form-group col-md-9">
+                  <label for="tipohab">Tipo de habitación</label>
+                  <select class="form-control" id="tipohab" placeholder="Seleccionar..." required="required">
+                    <option value="individual">Habitación Individual</option>
+                    <option value="doble">Habitación Doble</option>
+                  </select>
+                  </div>
+                  
+                  <div class="form-group col-md-3">
+                  <label for="numhab">Cantidad</label>
+                  <input type="number" class="form-control" id="numhab" placeholder="Número de habitaciones" value="1" required="required">
+                  </div>
+                  
+                  <p class="text-primary addroom col-md-12"><i class="fas fa-plus-circle mr-1"></i>Añadir habitación</p>
+                  
+                  <div class="form-group col-md-6">
+                  <label for="checkin">Fecha de entrada</label>
+                  <input type="date" class="form-control" id="checkin" value="2017-08-27" required="required">            
                   </div>
             
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="number" class="form-control" id="bnumberofrooms" placeholder="Habitaciones" required="">
+                  <div class="form-group col-md-6">
+                  <label for="checkout">Fecha de salida</label>
+                  <input type="date" class="form-control" id="checkout" value="2017-08-29" required="">
                   </div>
             
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="email" class="form-control" id="bemail" placeholder="Email" required="">
-                  </div>
-            
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="number" class="form-control" id="bnumberofpeople" placeholder="Personas" required="">
-                  </div>
-            
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="text" class="form-control" id="bphonenumber" placeholder="Teléfono" required="">
-                  </div>
-            
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="date" class="form-control" id="bcheckin" value="2017-08-27" required="">
-            
-                  </div>
-            
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <input type="date" class="form-control" id="bcheckout" value="2017-08-29" required="">
-                  </div>
-            
-                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
-                  <button type="submit" class="btn btn-secondary btn-block">Reservar</button>
+                  <div class="form-group col-md-12">
+                  <button type="submit" class="btn btn-secondary btn-block">Comprobar disponibilidad</button>
                   <div id="bmsgSubmit" class="h3 text-center hidden"></div>
                   </div>
                   </form>
@@ -494,6 +509,9 @@
 
     <!-- Script para la aplicación -->
     <script src="js/application.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
 
   </body>
 

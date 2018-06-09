@@ -3,7 +3,8 @@ header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   background-image: url('../img/header.jpg');
-  background-position: center center;
+  background-position: left;
+  height: 100vh;
   @include background-cover;
   img{
     max-width: 200px;
@@ -19,6 +20,7 @@ header.masthead {
     font-weight: 300;
   }
   @media (min-width: 768px) {
+    background-position: center center;
     p {
       font-size: 1.15rem;
     }

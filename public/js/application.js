@@ -64,4 +64,19 @@
 
   });
 
+  //Añadir habitaciones
+  var count= 0;
+  $('.addroom').click(function(){
+    if(count<1){
+      $(this).before('<div class="form-group col-md-9 added"><label for="tipohab'+count+'">Tipo de habitación</label><select class="form-control" id="tipohab'+count+'" placeholder="Seleccionar..." required="required"><option value="individual">Habitación Individual</option><option value="doble">Habitación Doble</option></select></div><div class="form-group col-md-3 added"><label for="numhab'+count+'">Cantidad</label><input type="number" class="form-control" id="numhab'+count+'" placeholder="Número de habitaciones" value="1" required="required"></div>');
+      $(this).html('<i class="fas fa-minus-circle mr-1 text-danger"></i>Quitar habitación');
+      count=1;
+    }else if(count==1){
+      $('.added').remove();
+      $(this).html('<i class="fas fa-plus-circle mr-1"></i>Añadir habitación');
+      count=0;
+    }
+    
+  })
+
 })(jQuery); // End of use strict

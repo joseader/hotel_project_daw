@@ -1,4 +1,4 @@
-#Proyecto de Fin de Grado - Hotel Ciudad Estepona
+# Proyecto de Fin de Grado - Hotel Ciudad Estepona
 
 Aplicación Web creada por Jose Ángel Delgado para el Proyecto de Fin de Grado de Desarrollo de Aplicaciones Web del IES Mar de Alborán. El aplicativo consiste en una web informativa de un hotel generada con una sola vista guiada para la facilidad en la experiencia del usuario y la reducción de tiempos de carga. La página web está diseñada con Bootstrap 4, Sass, HTML5, CSS3 y JS.
 
