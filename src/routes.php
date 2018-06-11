@@ -5,17 +5,14 @@ use Slim\Http\Response;
 
 // Routes
 
-/*$app->get('/[{name}]', function (Request $request, Response $response, array $args) {
-    // Sample log message
-    $this->logger->info("Slim-Skeleton '/' route");
+$app->get('/[{name}]', function (Request $request, Response $response, array $args) {
 
     // Render index view
-    return $this->renderer->render($response, 'index.phtml', $args);
-});*/
+    return $this->renderer->render($response, 'index.html', $args);
+});
 
-$app->get('/hola/{name}', function (Request $request, Response $response, array $args) {
-    $name = $args['name'];
-    $response->getBody()->write("Hello, $name");
+$app->get('/admin/[{name}]', function (Request $request, Response $response, array $args) {
 
-    return $response;
+    // Render admin view
+    return $this->renderer->render($response, 'admin/index.html', $args);
 });
