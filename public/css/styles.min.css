@@ -6,6 +6,7 @@ a{color:#125568;-webkit-transition:all .2s;transition:all .2s}
 a:hover{color:#125568}
 h1,h2,h3,h4,h5,h6{font-family:Raleway,'Helvetica Neue',Arial,sans-serif}
 button{-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;border:none;outline:0;border-radius:4px}
+button:focus{outline:0}
 .bg-primary{background-color:#125568!important}
 .bg-secondary{background-color:#d5a324!important}
 .bg-tertiary{background-color:#685012!important}
@@ -32,6 +33,7 @@ img::-moz-selection{color:#fff;background:0 0}
 .slider div{height:500px}
 }
 .addroom{cursor:pointer}
+#datepicker span{padding:.5rem 1rem;vertical-align:middle}
 #mainNav{border-bottom:1px solid rgba(33,37,41,.1);background-color:#fff;font-family:Raleway,'Helvetica Neue',Arial,sans-serif;-webkit-transition:all .2s;transition:all .2s}
 #mainNav .navbar-brand{font-weight:700;color:#125568;font-family:Raleway,'Helvetica Neue',Arial,sans-serif}
 #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:#125568}
@@ -91,7 +93,8 @@ header.masthead h1{font-size:4rem}
 }
 .text-primary{color:#125568!important}
 .text-tertiary{color:#685012!important}
-.btn{font-weight:700;text-transform:uppercase;border:none;border-radius:4px;font-family:Raleway,'Helvetica Neue',Arial,sans-serif;margin:.5rem 0}
+.btn{font-weight:700;text-transform:uppercase;border:none;border-radius:4px;font-family:Raleway,'Helvetica Neue',Arial,sans-serif;margin:.5rem 0;outline:0}
+.btn:focus{outline:0}
 .btn-xl{padding:1rem 2rem}
 .btn-block{margin:0}
 .btn-primary{background-color:#d5a324;border-color:#d5a324}
@@ -100,6 +103,9 @@ header.masthead h1{font-size:4rem}
 .btn-secondary{background-color:#685012;border-color:#685012}
 .btn-secondary:active,.btn-secondary:focus,.btn-secondary:hover{color:#fff;background-color:#523f0e!important}
 .btn-secondary:active,.btn-secondary:focus{-webkit-box-shadow:0 0 0 .2rem rgba(0,0,0,.295)!important;box-shadow:0 0 0 .2rem rgba(0,0,0,.295)!important}
+.btn-tertiary{color:#fff;background-color:#125568;border-color:#125568}
+.btn-tertiary:active,.btn-tertiary:focus,.btn-tertiary:hover{color:#fff;background-color:#0e4352!important}
+.btn-tertiary:active,.btn-tertiary:focus{-webkit-box-shadow:0 0 0 .2rem rgba(0,0,0,.295)!important;box-shadow:0 0 0 .2rem rgba(0,0,0,.295)!important}
 .footer .row{padding:4rem 0}
 .footer .copyright{background-color:#0e4352!important}
 .footer .btn-social{font-size:1.5rem}
@@ -111,5 +117,6 @@ header.masthead h1{font-size:4rem}
 .modal-lg{max-width:750px}
 .modal-content{background:0 0;border:none}
 .navbar-light .navbar-toggler{font-size:1.5rem;border:none;border-radius:4px;background:#125568;color:#fff}
+.nav-tabs .nav-link.active{background-color:transparent;border-color:#dee2e6 #dee2e6 #f8f9fa}
 .list-inline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .fixed-top{z-index:1000}

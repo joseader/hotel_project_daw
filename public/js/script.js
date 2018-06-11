@@ -63,20 +63,65 @@
     mobileFirst:true
 
   });
+  //Datepicker
+  $('.input-daterange').datepicker({
+    language:'es',
+    startDate: 'today',
+    todayHighlight: true,
+    format: 'yyyy/mm/dd'
+  });
 
   //Añadir habitaciones
   var count= 0;
   $('.addroom').click(function(){
+    var habitacion = "";
+    if ($('#tipohab').val()=='individual'){
+      habitacion = '<option value="doble">Habitación Doble</option>';
+    } else {
+      habitacion = '<option value="individual">Habitación Individual</option>'
+    }
     if(count<1){
-      $(this).before('<div class="form-group col-md-9 added"><label for="tipohab'+count+'">Tipo de habitación</label><select class="form-control" id="tipohab'+count+'" placeholder="Seleccionar..." required="required"><option value="individual">Habitación Individual</option><option value="doble">Habitación Doble</option></select></div><div class="form-group col-md-3 added"><label for="numhab'+count+'">Cantidad</label><input type="number" class="form-control" id="numhab'+count+'" placeholder="Número de habitaciones" value="1" required="required"></div>');
+      $(this).before('<div class="form-group col-md-9 added"><label for="tipohab2">Tipo de habitación</label><select class="form-control" id="tipohab2" name="tipo_habitacion2" required>'+habitacion+'</select></div><div class="form-group col-md-3 added"><label for="numhab2">Cantidad</label><input type="number" class="form-control" id="numhab2" name="cantidad2" placeholder="Número de habitaciones" value="1" required></div>');
       $(this).html('<i class="fas fa-minus-circle mr-1 text-danger"></i>Quitar habitación');
+      $('#tipohab').attr('disabled', 'disabled');
       count=1;
     }else if(count==1){
       $('.added').remove();
       $(this).html('<i class="fas fa-plus-circle mr-1"></i>Añadir habitación');
+      $('#tipohab').removeAttr('disabled');
       count=0;
     }
     
   })
+
+  //Funciones Ajax
+
+  $('#booking-form').on('submit', function (e) {
+    $('.ajax-loader').fadeIn(300);
+    e.preventDefault();
+    $.post('/reservas/comprobar/disponibilidad', $(this).serialize())
+    .done(function (data) {
+      console.log(data);
+      var disponibilidad = true;
+      if((data[0].num_individuales+data[0].cantidad)>data[0].total){
+        $('#alert-disponibilidad').fadeIn(300).html('<p class="alert alert-danger">No disponemos de esa cantidad de habitaciones individuales para la fecha indicada.</p>');
+        disponibilidad = false;
+      }
+      if (data.length>=2){
+        if((data[1].num_individuales+data[1].cantidad)>data[0].total){
+          $('#alert-disponibilidad').fadeIn(300).html('<p class="alert alert-danger col-md-12 text-center">No disponemos de esa cantidad de habitaciones dobles para la fecha indicada.</p>');
+          disponibilidad=false;
+        }
+      }
+      
+      if(disponibilidad){
+          $('#alert-disponibilidad').fadeIn(300).html('<p class="alert alert-success col-md-12 text-center">Hay habitaciones disponibles</p>');        
+      }
+      $('.ajax-loader').fadeOut(300);
+    })
+    .fail(function(){
+      alert('error');
+    });
+  });
 
 })(jQuery); // End of use strict

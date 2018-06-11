@@ -41,6 +41,9 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="vendor/slick/css/slick-theme.css"/>
 
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="vendor/datepicker/css/bootstrap-datepicker.min.css">
+
     <!-- Estilos CSS -->
     <link href="css/styles.min.css" rel="stylesheet">
     <style>
@@ -58,8 +61,7 @@
         font-size: 6rem;
       }
       
-    </style>
- 
+    </style> 
 
   </head>
 
@@ -98,7 +100,7 @@
               <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
             </li>
             <li class="nav-item">
-              <button class="nav-link reservar" data-toggle="modal" data-target="#reservas">Reservar</button>
+              <button class="nav-link reservar" data-toggle="modal" data-target="#reservas-modal">Reservar</button>
             </li>
           </ul>
         </div>
@@ -116,7 +118,7 @@
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-faded mb-5">Los besos que el mar da en Estepona<br>deja limpias espumas en la boca<br>y una fuerza de sales en el alma.</p>
-            <button class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#reservas">Reserva ahora</button>
+            <button class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#reservas-modal">Reserva ahora</button>
           </div>
         </div>
       </div>
@@ -201,7 +203,7 @@
                 <p class="card-text">Habitación para 1 persona en cama de 90 cm. Disponen de cuarto de baño, Wi-Fi, teléfono, aire acondicionado y receptor de Tv. Todas al exterior con ventana y/o balcón.</p>
                 
               </div>
-              <button class="btn btn-primary btn-xl btn-block card-footer" data-toggle="modal" data-target="#reservas">Reservar</button>
+              <button class="btn btn-primary btn-xl btn-block card-footer" data-toggle="modal" data-target="#reservas-modal">Reservar</button>
              
             </div>
             <div class="card m-3">
@@ -211,7 +213,7 @@
                 <p class="card-text">Habitación para 2 personas con 2 camas individuales (90 cm.) o cama de matrimonio (135-150 cm.). Disponen de cuarto de baño, Wi-Fi, teléfono, aire acondicionado y receptor de Tv. Todas al exterior con ventana y/o balcón.</p>
 
               </div>             
-              <button class="btn btn-primary btn-xl btn-block card-footer" data-toggle="modal" data-target="#reservas">Reservar</button>
+              <button class="btn btn-primary btn-xl btn-block card-footer" data-toggle="modal" data-target="#reservas-modal">Reservar</button>
               
             </div>
           </div>
@@ -445,52 +447,77 @@
         </div>
     </div>
 
-    <div class="modal fade" id="reservas" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="reservas-modal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content bg-light">
-              <div class="modal-header">
+              <div class="modal-header flex-wrap">
 
                   <h5 class="modal-title"> Haz tu reserva </h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="fas fa-times"></i>
-                  </button>
+                  </button>                  
               </div>
               <div class="modal-body">
-                  <!-- Booking Form -->
+                  
+                <!-- NavTab -->
+                <ul class="nav nav-tabs col-md-12">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#disponibilidad" id="disp" aria-controls="disponibilidad" aria-selected="true"> Paso 1 </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link disabled" data-toggle="tab" href="#reserva" id="resv" aria-controls="reserva" aria-selected="false"> Paso 2 </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link disabled" data-toggle="tab" href="#pago" id="pay" aria-controls="pago" aria-selected="false"> Paso 3 </a>
+                  </li>
+                </ul>
+                  <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade show active" id="disponibilidad" aria-labelledby="disp">
+                  
+                    <!-- Booking Form -->
+                    <form id="booking-form" class="d-flex flex-wrap justify-content-between pt-3">
+                  
+                    <div class="form-group col-md-12 d-flex justify-content-between m-0">
+                      <label for="checkin">Check-In</label>
+                      <label for="checkout" class="text-right">Check-Out</label>
+                    </div>
+                            
+                    <div class="form-group col-md-12 input-daterange input-group" id="datepicker">
+                        <input type="text" class="input-sm form-control" name="fec_entrada" id="checkin" required/>
+                        <span class="bg-primary text-center text-white"><i class="fas fa-calendar-alt"></i></span>
+                        <input type="text" class="input-sm form-control" name="fec_salida" id="checkout" required/>
+                    </div>
 
-                  <form id="BookingForm" data-toggle="validator" novalidate="true" class="d-flex flex-wrap justify-content-between">
-            
-                  <div class="form-group col-md-9">
-                  <label for="tipohab">Tipo de habitación</label>
-                  <select class="form-control" id="tipohab" placeholder="Seleccionar..." required="required">
-                    <option value="individual">Habitación Individual</option>
-                    <option value="doble">Habitación Doble</option>
-                  </select>
-                  </div>
-                  
-                  <div class="form-group col-md-3">
-                  <label for="numhab">Cantidad</label>
-                  <input type="number" class="form-control" id="numhab" placeholder="Número de habitaciones" value="1" required="required">
-                  </div>
-                  
-                  <p class="text-primary addroom col-md-12"><i class="fas fa-plus-circle mr-1"></i>Añadir habitación</p>
-                  
-                  <div class="form-group col-md-6">
-                  <label for="checkin">Fecha de entrada</label>
-                  <input type="date" class="form-control" id="checkin" value="2017-08-27" required="required">            
-                  </div>
-            
-                  <div class="form-group col-md-6">
-                  <label for="checkout">Fecha de salida</label>
-                  <input type="date" class="form-control" id="checkout" value="2017-08-29" required="">
-                  </div>
-            
-                  <div class="form-group col-md-12">
-                  <button type="submit" class="btn btn-secondary btn-block">Comprobar disponibilidad</button>
-                  </div>
+                    <div class="form-group col-md-9">
+                    <label for="tipohab">Tipo de habitación</label>
+                    <select class="form-control" id="tipohab" name="tipo_habitacion" required>
+                      <option value="individual">Habitación Individual</option>
+                      <option value="doble">Habitación Doble</option>
+                    </select>
+                    </div>
+                    
+                    <div class="form-group col-md-3">
+                    <label for="numhab">Cantidad</label>
+                    <input type="number" class="form-control" id="numhab" name="cantidad" placeholder="Número de habitaciones" value="1" required>
+                    </div>
+                    
+                    <p class="text-primary addroom col-md-12"><i class="fas fa-plus-circle mr-1"></i>Añadir habitación</p>
+                    
+                    <div class="visually-hidden ajax-loader col-md-12 text-center mb-3"><i class="fas fa-spinner fa-pulse text-primary"></i></div>
+                    <div class="visually-hidden col-md-12 text-center" id="alert-disponibilidad"></div>
+
+                    <div class="form-group col-md-12">
+                    <button type="submit" class="btn btn-tertiary btn-xl btn-block">Reservar</button>
+                    </div>                  
+                    
                   </form>
-                </div>                 
-                  <!-- end of contact form -->
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="reserva" aria-labelledby="resv"></div>
+                  <div role="tabpanel" class="tab-pane fade" id="pago" aria-labelledby="pay"></div>
+                </div>              
+              </div>
+              
+                <!-- end of contact form -->
           </div>
       </div>
     </div>
@@ -506,6 +533,8 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/slick/js/slick.min.js"></script>
+    <script src="vendor/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="vendor/datepicker/js/bootstrap-datepicker.es.min.js"></script>
 
     <!-- Script para la aplicación -->
     <script src="js/script.js"></script>

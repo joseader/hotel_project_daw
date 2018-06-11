@@ -35,8 +35,10 @@ button {
           appearance: none;
   cursor: pointer;
   border: none;
-  outline: none;
+  outline: 0;
   border-radius: 4px; }
+  button:focus {
+    outline: 0; }
 
 .bg-primary {
   background-color: #125568 !important; }
@@ -110,6 +112,10 @@ img::-moz-selection {
 
 .addroom {
   cursor: pointer; }
+
+#datepicker span {
+  padding: .5rem 1rem;
+  vertical-align: middle; }
 
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
@@ -303,7 +309,10 @@ header.masthead {
   border: none;
   border-radius: 4px;
   font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-  margin: .5rem 0; }
+  margin: .5rem 0;
+  outline: 0; }
+  .btn:focus {
+    outline: 0; }
 
 .btn-xl {
   padding: 1rem 2rem; }
@@ -328,6 +337,17 @@ header.masthead {
     color: #fff;
     background-color: #523f0e !important; }
   .btn-secondary:active, .btn-secondary:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295) !important;
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295) !important; }
+
+.btn-tertiary {
+  color: #fff;
+  background-color: #125568;
+  border-color: #125568; }
+  .btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active {
+    color: #fff;
+    background-color: #0e4352 !important; }
+  .btn-tertiary:active, .btn-tertiary:focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295) !important;
             box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.295) !important; }
 
@@ -377,6 +397,10 @@ header.masthead {
   border-radius: 4px;
   background: #125568;
   color: #fff; }
+
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-color: #dee2e6 #dee2e6 #f8f9fa; }
 
 .list-inline {
   display: -webkit-box;
