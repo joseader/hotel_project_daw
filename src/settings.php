@@ -21,7 +21,7 @@ return [
         "host" => "localhost",
         "dbname" => "motor_reservas",
         "user" => "root",
-        "pass" => ""
+        "pass" => "root"
         ],
     ],
 ];
