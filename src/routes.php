@@ -51,3 +51,39 @@ $app->post('/reservas/comprobar/disponibilidad', function (Request $request, Res
     
     return $this->response->withJson($result);
 });
+
+$app->post('/admin/funciones/login', function (Request $request, Response $response, array $args) {
+    
+    header("Access-Control-Allow-Origin: *");
+
+    $consulta = "SELECT * FROM administracion WHERE usuario ='" . $_POST['usuario'] . "' AND clave = MD5('" . $_POST['clave'] . "')";
+
+    $query = $this->db->prepare($consulta);
+    $query->execute();
+    
+
+    if (!$query) {
+        return $this->response->withJson(array('usuario' => 'incorrecto'));
+    }
+
+    if ($query->rowCount() > 0) {
+        $result= $query->fetch();
+        return $this->response->withJson(array('usuario' => 'registrado', 'idUsuario' => $result['id_usuario'], 'nombre' => $result['usuario']));
+    } else {
+        return $this->response->withJson(array('usuario' => 'incorrecto'));
+    }
+
+
+});
+
+$app->get('/admin/funciones/getReservas', function (Request $request, Response $response, array $args) {
+    header("Access-Control-Allow-Origin: *");
+
+    $consulta = "SELECT * FROM reservas";
+    $query = $this->db->prepare($consulta);
+    $query->execute();
+    $result=$query->fetchAll();
+
+    return $this->response->withJson($result);
+
+});

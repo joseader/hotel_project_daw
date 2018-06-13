@@ -3,10 +3,87 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Administración del Hotel Ciudad Estepona</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Fuente Raleway y Font-Awesome -->
+	<link href="../vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+
+    <!-- Estilos CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    
+    
+    
 </head>
 <body>
-    <h1>Administración del Hotel</h1>
+    <div class="container">
+        
+            <div id="contentdiv" class="contcustom">
+                <img src="../img/ciudad-estepona.png">
+                <h2>Iniciar Sesión</h2>
+                <div>
+                    <input id="usuario" type="text" placeholder="Usuario">
+                    <input id="password" type="password" placeholder="Password">
+                    <button id="submit" class="btn btn-tertiary wide" onclick="loguear()"><span class="fas fa-lock med"></span></button>
+                    <p id="mensaje" class="hidden"></p>
+                </div>
+            </div>
+            <table id="reservas" class="hidden table table-responsive bg-light">
+                    <thead>
+                        <tr>
+                            <th>Id Reserva</th>
+                            <th>Habitación</th>
+                            <th>Desayuno</th>
+                            <th>Fecha de entrada</th>
+                            <th>Fecha de salida</th>
+                            <th>Localizador</th>
+                            <th>Código promocional</th>
+                            <th>Administrador</th>
+                        </tr>                        
+                    </thead>
+            </table>
+        
+    </div>
+    
+
+    <!-- Script para la aplicación -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../vendor/font-awesome/js/fontawesome-all.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs4-4.0.0/jq-3.2.1/dt-1.10.16/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    getReservas();
+    </script>
+    
+
 </body>
 </html>
