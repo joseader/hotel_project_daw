@@ -229,64 +229,64 @@
 					<div class="col-lg-6">
 						<button class="portfolio-box" data-toggle="modal" data-target="#slider-hab">
 							<img class="img-fluid" src="img/galeria/thumbnails/2.jpg" alt="Habitaciones">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-category text-faded">
+							<span class="portfolio-box-caption">
+								<span class="portfolio-box-caption-content">
+									<span class="project-category text-faded">
 										Habitaciones
-									</div>
-									<div class="project-name">
+									</span>
+									<span class="project-name">
 										Imágenes de las habitaciones
-									</div>
-								</div>
-							</div>
+									</span>
+								</span>
+							</span>
 						</button>  
 					</div>
 					
 					<div class="col-lg-6">
 						<button class="portfolio-box" data-toggle="modal" data-target="#slider-servicios">
 							<img class="img-fluid" src="img/galeria/thumbnails/4.jpg" alt="Servicios">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-category text-faded">
+							<span class="portfolio-box-caption">
+								<span class="portfolio-box-caption-content">
+									<span class="project-category text-faded">
 										Servicios
-									</div>
-									<div class="project-name">
+									</span>
+									<span class="project-name">
 										Desayunos y comidas
-									</div>
-								</div>
-							</div>
+									</span>
+								</span>
+							</span>
 						</button>  
 					</div>
 					
 					<div class="col-lg-6">
 						<button class="portfolio-box" data-toggle="modal" data-target="#slider-turismo">
 							<img class="img-fluid" src="img/galeria/thumbnails/3.jpg" alt="Turismo">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-category text-faded">
+							<span class="portfolio-box-caption">
+								<span class="portfolio-box-caption-content">
+									<span class="project-category text-faded">
 										Turismo
-									</div>
-									<div class="project-name">
+									</span>
+									<span class="project-name">
 										Estepona y su cultura
-									</div>
-								</div>
-							</div>
+									</span>
+								</span>
+							</span>
 						</button>  
 					</div>
 					
 					<div class="col-lg-6">
 						<button class="portfolio-box" data-toggle="modal" data-target="#slider-hotel">
 							<img class="img-fluid" src="img/galeria/thumbnails/5.jpg" alt="Hotel">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-category text-faded">
+							<span class="portfolio-box-caption">
+								<span class="portfolio-box-caption-content">
+									<span class="project-category text-faded">
 										Hotel
-									</div>
-									<div class="project-name">
+									</span>
+									<span class="project-name">
 										Instalaciones del Hotel
-									</div>
-								</div>
-							</div>
+									</span>
+								</span>
+							</span>
 						</button>  
 					</div>
 					
@@ -315,7 +315,7 @@
 					</div>
 				</div> 
 				<div class="row map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.384508479841!2d-5.150488184645994!3d36.424084080027704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0cd6a60a260511%3A0xc3de9da42d0d9495!2sHotel+Ciudad+Estepona!5e0!3m2!1ses!2ses!4v1528365086631" width="100%" height="450" style="border:0" allowfullscreen title="Mapa del sitio"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3210.384508479841!2d-5.150488184645994!3d36.424084080027704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0cd6a60a260511%3A0xc3de9da42d0d9495!2sHotel+Ciudad+Estepona!5e0!3m2!1ses!2ses!4v1528365086631" style="border:0" allowfullscreen title="Mapa del sitio"></iframe>
 				</div>         
 			</div>
 			
@@ -462,13 +462,13 @@
 					<!-- NavTab -->
 					<ul class="nav nav-tabs col-md-12">
 						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#disponibilidad" id="disp" aria-controls="disponibilidad" aria-selected="true"> Paso 1 </a>
+							<a class="nav-link active" data-toggle="tab" href="#disponibilidad" id="disp" aria-controls="disponibilidad" aria-selected="true" aria-checked="true" role="tab"> Paso 1 </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" data-toggle="tab" href="#reserva" id="resv" aria-controls="reserva" aria-selected="false"> Paso 2 </a>
+							<a class="nav-link disabled" data-toggle="tab" href="#reserva" id="resv" aria-controls="reserva" aria-selected="false" aria-checked="false" role="tab"> Paso 2 </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" data-toggle="tab" href="#pago" id="pay" aria-controls="pago" aria-selected="false"> Paso 3 </a>
+							<a class="nav-link disabled" data-toggle="tab" href="#pago" id="pay" aria-controls="pago" aria-selected="false" aria-checked="false" role="tab"> Paso 3 </a>
 						</li>
 					</ul>
 					<div class="tab-content">
@@ -491,8 +491,8 @@
 								<div class="form-group col-md-9">
 									<label for="tipohab">Tipo de habitación</label>
 									<select class="form-control" id="tipohab" name="tipo_habitacion" required>
-										<option value="individual">Habitación Individual</option>
-										<option value="doble">Habitación Doble</option>
+										<option value="1">Habitación Individual</option>
+										<option value="2">Habitación Doble</option>
 									</select>
 								</div>
 								
@@ -524,11 +524,11 @@
 										</div>
 										<div class="col-md-6 d-flex justify-content-around align-items-center">
 											<div class="form-group">
-												<input class="form-check-input" type="radio" class="form-control" id="si" name="desayuno" value="1" required>
+												<input class="form-check-input" type="radio" id="si" name="desayuno" value="1" required>
 												<label class="form-check-label" for="si">Sí</label>
 											</div>
 											<div class="form-group">
-												<input class="form-check-input" type="radio" class="form-control" id="no" name="desayuno" value="0" required>
+												<input class="form-check-input" type="radio" id="no" name="desayuno" value="0" required>
 												<label class="form-check-label" for="no">No</label>
 											</div>
 										</div>

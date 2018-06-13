@@ -19,9 +19,9 @@ $app->post('/reservas/comprobar/disponibilidad', function (Request $request, Res
     header("Access-Control-Allow-Origin: *");
     
     $result=array();    
-
+    
     if(isset($_POST['tipo_habitacion']) && isset($_POST['cantidad'])){
-        
+        checkOptions($_POST['tipo_habitacion']);
         $query = $this->db->prepare("SELECT count(*) AS reservadas FROM reservas JOIN habitacion 
         ON habitacion.id_habitacion = reservas.habitacion 
         WHERE (habitacion.tipo_habitacion ='".$_POST['tipo_habitacion']."') 
@@ -35,7 +35,7 @@ $app->post('/reservas/comprobar/disponibilidad', function (Request $request, Res
     }
     
     if(isset($_POST['tipo_habitacion2']) && isset($_POST['cantidad2'])){
-                
+        checkOptions($_POST['tipo_habitacion']);        
         $query = $this->db->prepare("SELECT count(*) AS reservadas FROM reservas JOIN habitacion 
         ON habitacion.id_habitacion = reservas.habitacion 
         WHERE (habitacion.tipo_habitacion ='".$_POST['tipo_habitacion2']."') 
