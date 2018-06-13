@@ -3,16 +3,6 @@
 
 // e.g: $app->add(new \Slim\Csrf\Guard);
 
-function checkOptions($option){
-
-    if ($option == '1') {
-        $option='individual';
-    } elseif ($option == '2'){
-        $option='doble';
-    }
-    
-}
-
 function comprobarDisponibilidad($tipohab1, $cantidad1, $reservadas1, $tipohab2=null, $cantidad2=null, $reservadas2=null){
 
     $total= 40;

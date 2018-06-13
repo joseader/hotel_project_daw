@@ -460,15 +460,15 @@
 				<div class="modal-body">
 					
 					<!-- NavTab -->
-					<ul class="nav nav-tabs col-md-12">
+					<ul class="nav nav-tabs col-md-12" role="tab-list">
 						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#disponibilidad" id="disp" aria-controls="disponibilidad" aria-selected="true" aria-checked="true" role="tab"> Paso 1 </a>
+							<a class="nav-link active" data-toggle="tab" href="#disponibilidad" id="disp" aria-controls="disponibilidad" aria-selected="true" role="tab"> Paso 1 </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" data-toggle="tab" href="#reserva" id="resv" aria-controls="reserva" aria-selected="false" aria-checked="false" role="tab"> Paso 2 </a>
+							<a class="nav-link disabled" data-toggle="tab" href="#reserva" id="resv" aria-controls="reserva" aria-selected="false" role="tab"> Paso 2 </a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" data-toggle="tab" href="#pago" id="pay" aria-controls="pago" aria-selected="false" aria-checked="false" role="tab"> Paso 3 </a>
+							<a class="nav-link disabled" data-toggle="tab" href="#pago" id="pay" aria-controls="pago" aria-selected="false" role="tab"> Paso 3 </a>
 						</li>
 					</ul>
 					<div class="tab-content">
@@ -490,9 +490,9 @@
 								
 								<div class="form-group col-md-9">
 									<label for="tipohab">Tipo de habitación</label>
-									<select class="form-control" id="tipohab" name="tipo_habitacion" required>
-										<option value="1">Habitación Individual</option>
-										<option value="2">Habitación Doble</option>
+									<select class="form-control" id="tipohab" name="tipo_habitacion">
+										<option value="individual">Habitación Individual</option>
+										<option value="doble">Habitación Doble</option>
 									</select>
 								</div>
 								

@@ -21,21 +21,21 @@ $app->post('/reservas/comprobar/disponibilidad', function (Request $request, Res
     $result=array();    
     
     if(isset($_POST['tipo_habitacion']) && isset($_POST['cantidad'])){
-        checkOptions($_POST['tipo_habitacion']);
+
         $query = $this->db->prepare("SELECT count(*) AS reservadas FROM reservas JOIN habitacion 
         ON habitacion.id_habitacion = reservas.habitacion 
         WHERE (habitacion.tipo_habitacion ='".$_POST['tipo_habitacion']."') 
         AND ('".$_POST['fec_entrada']."' BETWEEN reservas.fec_entrada AND reservas.fec_salida)");
         $query->execute();
         $data= $query->fetch();
-
-       $disponibilidad= comprobarDisponibilidad($_POST['tipo_habitacion'],$_POST['cantidad'],$data['reservadas']);
+        
+        $disponibilidad= comprobarDisponibilidad($_POST['tipo_habitacion'],$_POST['cantidad'],$data['reservadas']);
 
         array_push($result, array('reservadas'=>$data['reservadas'],'tipo_habitacion'=>$_POST['tipo_habitacion'], 'cantidad'=>$_POST['cantidad'],'disponibilidad'=>$disponibilidad));
     }
     
     if(isset($_POST['tipo_habitacion2']) && isset($_POST['cantidad2'])){
-        checkOptions($_POST['tipo_habitacion']);        
+
         $query = $this->db->prepare("SELECT count(*) AS reservadas FROM reservas JOIN habitacion 
         ON habitacion.id_habitacion = reservas.habitacion 
         WHERE (habitacion.tipo_habitacion ='".$_POST['tipo_habitacion2']."') 
