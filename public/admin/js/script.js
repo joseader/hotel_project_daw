@@ -38,8 +38,8 @@ function loguear() {
                     
                     localStorage.setItem('idUsuario', data.id_usuario);
                     localStorage.setItem('nombre', data.nombre);
-
-                    $('#contentdiv').addClass('hidden');
+                    getReservas();
+                    
 
                 } else if (localStorage.getItem('usuario') === "incorrecto") {
                     $('#mensaje').removeClass('hidden');
