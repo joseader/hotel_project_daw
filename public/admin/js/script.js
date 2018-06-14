@@ -1,13 +1,15 @@
 function getReservas(){
 
         if (localStorage.getItem('usuario') === 'registrado') {
-            $('#contentdiv').addClass('hidden');
-            $('#reservas').removeClass('hidden');
+            $('#contentdiv').addClass('hidden');          
+            
 
             $.getJSON("funciones/getReservas", "json")
             .done(function (data, textStatus, jqXHR) {
                 console.log(data);
-                text="<thead> <tr> <th>Id Reserva</th> <th>Habitación</th> <th>Desayuno</th> <th>Fecha de entrada</th> <th>Fecha de salida</th> <th>Localizador</th> <th>Código promocional</th> <th>Administrador</th> </tr> </thead><tbody>";
+                $('.container>h1').removeClass('hidden');
+                $('#reservas').removeClass('hidden');
+                text="<thead> <tr> <th>Id Reserva</th> <th>Id Cliente</th> <th>Habitación</th> <th>Desayuno</th> <th>Fecha de entrada</th> <th>Fecha de salida</th> <th>Localizador</th> <th>Código promocional</th> <th>Administrador</th> </tr> </thead><tbody>";
                 $.each(data, function (key, value) {
 
                     text += '<tr><td>'+value.id_reserva+'</td><td>'+value.cliente+'</td><td>'+value.habitacion+'</td><td>'+value.desayuno+'</td><td>'+value.fec_entrada+'</td><td>'+value.fec_salida+'</td><td>'+value.localizador+'</td><td>'+value.promo+'</td><td>'+value.administrador+'</td></tr>';

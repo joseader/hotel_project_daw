@@ -50,6 +50,9 @@ p{
     font-size: 12px;
     margin-top: 1rem;
 }
+th{
+    border-top: 0;
+}
 .btn{
     display: flex;
     align-items: center;
