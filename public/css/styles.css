@@ -262,6 +262,8 @@ header.masthead {
   border: none;
   padding: 0;
   cursor: pointer; }
+  .portfolio-box span {
+    display: block; }
   .portfolio-box .portfolio-box-caption {
     position: absolute;
     bottom: 0;
